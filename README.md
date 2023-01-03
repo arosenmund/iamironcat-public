@@ -3,6 +3,11 @@
 Public assets for the  blueteam ironcat threat emulation suite.
 B.I.T.E.S
 
+Youtube Channel:
+
+![Ironcat Malware Youtube Series](https://youtube.com/playlist?list=PLle9BGvw9HqKWkUfmB9K-jcI_2UGCIVfB)
+
+
 ## Public Release V1 Ransowmare
 [Ironcat_Public_V1](./ironcat_ransomware_v1/)
 
