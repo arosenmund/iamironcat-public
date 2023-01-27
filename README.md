@@ -8,7 +8,7 @@ Youtube Channel:
 [Ironcat Malware Youtube Series](https://youtube.com/playlist?list=PLle9BGvw9HqKWkUfmB9K-jcI_2UGCIVfB)
 
 
-## Public Release V1 Ransowmare
+## Public Release V1.1 Ransowmare
 [Ironcat_Public_V1](./ironcat_ransomware_v1/)
 
 
@@ -21,7 +21,7 @@ These are small code wrappers for windows and linux that will create an executab
 
 To test the detection of TTP's that leverage system commands, simply modify the strings that are written to the script file with code to emulate a specific TTP activity.  Then compile and run on your test machine.  This should enabled low code blue teams to rapidly create tests for TTPs identified through incident response or threat intelligence, and then test their tooling, detections, or mitigations.
 
-As time goes on, various samples will be provided. 
+As time goes on, various samples will be provided. Updated with iaiprvv1.1 for defender evasion as of 1-25-23.
 
 ## Catamorph
 

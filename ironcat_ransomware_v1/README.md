@@ -1,5 +1,6 @@
-# Ironcat Public Release V1
+# Ironcat Public Release V1.1
 
+** Updated with v1.1 not detected in defender as of 1-25-23. You can still use the previous version if you prefer, the commands are slightly different using "encrypt/decrypt" instead of the now current "enshwypt/deshwypt" Keep it shwypty. **
 
 Do not run on production systems that contain business information.  Though there is a decryption function build in! There is no guaruntee that your data will not be corrupted. Ironcat is not liable for misuse resulting in destruction of property.
 
@@ -16,12 +17,12 @@ Do not run on production systems that contain business information.  Though ther
 
 1. Change directory to the location with the iaiprv1.exe file.
 
-1. Run the encyprt command. `iaiprv1.exe encrypt <pw>` where <pw> is a password key that you supply.
+1. Run the encyprt command. `iaiprv1.1.exe enshwypt <pw>` where <pw> is a password key that you supply.
 > It is criticl that you remember this password key for decryption.
 
 1. Watch it work and see if you are able to find the IOC's and Behaviors in your tooling or SOC response.
 
-
+1. To decrypt use `iaiprv1.1.exe deshwypt <pw>`
 
 ## Emulated IOCs & Behavior
 
