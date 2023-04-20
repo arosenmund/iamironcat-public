@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://www.microsoft.com/store/buy/cartcount -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>title</title>
+</head>
+<body>
+    <script>
+        function getCartItemCountFromCookie() {
+            var name = 'cartItemCount=';
+            var allCookies = document.cookie.split(';');
+            for (var i = 0; i < allCookies.length; i++) {
+                var c = allCookies[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return 0;
+        }
+
+        var count = getCartItemCountFromCookie();
+
+        var parentHost = '';
+        var parentOriginProtocol = '';
+        var parentOrigin = '';
+        try {
+            parentHost = parent.location.hostname || '';
+            parentOriginProtocol = parent.location.protocol;
+            parentOrigin = parent.location.origin;
+        } catch {
+        }
+
+        if (parentHost && parentOriginProtocol && parentOrigin && parentOriginProtocol.indexOf('https') === 0 && /\.(microsoft|xbox)\.com$/.test(parentHost)) {
+            parent.postMessage('DR_Cart_Count=' + count, parentOrigin);
+        }
+    </script>
+
+
+</body></html>

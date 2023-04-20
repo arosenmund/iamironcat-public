@@ -1,0 +1,1 @@
+$(function(){var b=document.querySelector("#msChatContainer"),a=document.querySelector(".back-to-top.sticky");b&&a&&$(a).addClass("pageHasChatContainer")});
