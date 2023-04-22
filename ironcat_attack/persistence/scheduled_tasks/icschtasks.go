@@ -56,17 +56,16 @@ func directRun(t string) {
 }
 
 func main() {
-	mode := os.Args[1]
-	t := os.Args[2]
-	fmt.Println("BeepBoop Meow Meow")
-	fmt.Println("Starting the application...")
-	switch mode {
-	case "file_batch":
+	//mode := os.Args[1]
+	//t := os.Args[2]
+	arg_count := len(os.Args)-1
+	if arg_count > 2 {
+	fmt.Println("Beep Boop Meow Meow Meow")
+	fmt.Println("Starting the application...ironcat shall remain")
 		batchRun()
-	case "direct_cmd":
-
-		directRun(t)
-
+		directRun("1")
+	}else{
+		fmt.Println("-+-Ironcat doesn't respond to your 'pet' names. Call me snowball one more time.-+-")
 	}
 
 }
