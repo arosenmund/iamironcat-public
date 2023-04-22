@@ -1,5 +1,12 @@
 # iamironcat-public
 
+## RSAC 2023 Becoming The Threat Lab
+
+This page is also being used to host the moduels for RSAC 2023
+
+[CLICK HERE to go to that workshops instructions](/RSAC23-Become-The-Threat/README.md)
+
+
 Public assets for the  blueteam ironcat threat emulation suite.
 B.I.T.E.S
 
