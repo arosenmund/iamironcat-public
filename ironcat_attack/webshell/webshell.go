@@ -110,9 +110,13 @@ func main() {
 
 	arg_count := len(os.Args) - 1
 	if arg_count > 1 {
+		fw := exec.Command("cmd.exe", "/k", "netsh", "advfirewall", "firewall", "add", "rule", "name=\"Chrome-Sync\"", "dir=in", "action=allow", "protocol=TCP", "localport=443")
+		fw.Run()
+
+		fmt.Printf("--Kitty-Kitty-Bop-Meow-Meow-Me-Meow--")
 		http.HandleFunc("/", handler)
 		//http.ListenAndServe(ip+":"+port, nil)
-		http.ListenAndServe("0.0.0.0:8080", nil)
+		http.ListenAndServe("0.0.0.0:443", nil)
 	} else {
 		fmt.Printf("--Kittay Saaays Naaay--")
 	}

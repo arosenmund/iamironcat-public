@@ -13,7 +13,12 @@
 
 ## Lab 2 Scheduled Task and Registry
 
-## Webshell
+## Webshell Instructions
+
+[Walkthrough](../ironcat_attack/webshell/webshell.md)
+
+[IOCs](../ironcat_attack/webshell/webshell_iocs.md)
+
 
 ## Process Injection
 
