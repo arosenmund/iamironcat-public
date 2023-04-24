@@ -59,3 +59,6 @@ What are names of files, where are they, and what do they do.
 What is the name of the scheduled task, and how could you detect it as malicous in an enterprise environment.
 
 - [IOCs](./schtasks_IOCs.md)
+
+
+[Become The Threat Home](../../../RSAC23-Become-The-Threat/README.md)

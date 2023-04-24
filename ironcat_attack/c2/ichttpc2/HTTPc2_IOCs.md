@@ -21,3 +21,5 @@ The server header has the "Mode" header, this could be used for signatures.
 What else? Share with the class.
 
 Did any security tools automatically identify the traffic or exe as malicous on stock Windows?  Will yours?
+
+[Become The Threat Home](../../../RSAC23-Become-The-Threat/README.md)

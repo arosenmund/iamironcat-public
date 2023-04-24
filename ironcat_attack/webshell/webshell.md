@@ -39,9 +39,11 @@ Standard web shell that will run on linux or windows, listening for connections.
 
 Once you are done answering the questions for yourself, check out some of the IOCs I identify for this activity here:
 
-[WebShell IOCs](./webshell_iocs.md)
+- [WebShell IOCs](./webshell_iocs.md)
 
 
+
+[Become The Threat Home](../../RSAC23-Become-The-Threat/README.md)
 
 
 

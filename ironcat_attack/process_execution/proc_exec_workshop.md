@@ -41,3 +41,6 @@ It is up to you and your tools on this one.  We can discuss as a group, but it i
 All of this including the lab will be available all week. Feel free to play around with these tools, pull down the project for use back home, and even modifiy some of the IOCs in the code we talked about.
 
 Remember you CAN use catamorph in this same repo to rapidly modify the exe with identifiable IOCs and a new hash without a development enviornment.
+
+
+[Become The Threat Home](../../RSAC23-Become-The-Threat/README.md)

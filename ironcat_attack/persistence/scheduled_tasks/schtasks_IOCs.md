@@ -7,3 +7,6 @@
 - Extra: Batch file is dropped c:\\ProgramData\\chtes.bat and ran but not cleaned up.
 - Batch file attempts sethc.exe backdoor, did it work? How would you know?
 - "MICROSOFT\\Windows\\WCM\\Nettask" Is where the scheduled task is hidden
+
+
+[Become The Threat Home](../../../RSAC23-Become-The-Threat/README.md)
