@@ -9,8 +9,6 @@
 2. Notice the already compiled client.exe file.  Check it's md5 hash using md5sum.
 `md5sum client.exe`
 
-3. Now check the 
-
 4. Time to move the payload over to the Windows Target. Host the file using python http simple server.
 `python3 -m http.server`
 
