@@ -23,13 +23,14 @@ Note: this is not the same service as windows defender, it is an artifact of us 
 
 9. Open command prompt and change directory to the downloads folder.
 `cd c:\Users\pslearner.PS-WIN-1\Downloads`
-10. Move the evilm64.dll file to the c:\Users\Public\Desktop location.
-`cp evilm64.dll c:\Users\Public\Desktop`
-11. Run an instance of notepad.exe to inject into.
+10. Run an instance of notepad.exe to inject into.
 `notepad.exe`
 12. Run `tasklist` and look for **notpad.exe**. Identify the PID or 4 digit number associated with the running process.
 13. Run injectdll.exe with the PID from notepad.exe as an argument. ex. `injectdll.exe 4564`
 Profit.
+
+**You may want to repeat this with procmon running**
+
 
 ## Questions To Ask
 Did I get any alerts.
