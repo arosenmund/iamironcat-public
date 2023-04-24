@@ -12,9 +12,9 @@ This one is a bit different, payloads are not written in go, and we will not be 
 3. Time to move the payload over to the Windows Target. Host the file using python http simple server.
 `python3 -m http.server`
 
-4. Use the drop down in the top left to connect to the Windows Target device.
+4. Use the drop down in the top left to connect to the **Windows Target** device.
 
-6. Open a firefox browser window and browse to http:172.32.14.10:8000
+6. Open a firefox browser window and browse to http:172.31.24.10:8000
 
 7. Click the two files mentioned above to download it to the device.
 
@@ -27,7 +27,7 @@ Note: this is not the same service as windows defender, it is an artifact of us 
 `cp evilm64.dll c:\Users\Public\Desktop`
 11. Run an instance of notepad.exe to inject into.
 `notepad.exe`
-12. Run `tasklist` and look for **notpade.exe**. Identify the PID or 4 digit number associated with the running process.
+12. Run `tasklist` and look for **notpad.exe**. Identify the PID or 4 digit number associated with the running process.
 13. Run injectdll.exe with the PID from notepad.exe as an argument. ex. `injectdll.exe 4564`
 Profit.
 

