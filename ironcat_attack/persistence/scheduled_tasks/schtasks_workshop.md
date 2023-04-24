@@ -17,7 +17,7 @@
 
 5. Use the drop down in the top left to connect to the Windows Target device.
 
-6. Open a firefox browser window and browse to http:172.32.14.10:8000
+6. Open a firefox browser window and browse to http:172.31.24.10:8000
 
 7. Click **icschtasks.exe** to download it to the device.
 
