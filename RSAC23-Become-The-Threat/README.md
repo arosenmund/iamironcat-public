@@ -4,7 +4,7 @@ This lab will be completed in the pluralsight lab environment.
 
 Please navigate to the "Apache Commons Text: Emulation and Detection" lab.  We will not be using the instructions from this lab, but we will be using the infrastructure.  All instructions will be followed from this github.
 
-[Pluralsight Lab](https://app.pluralsight.com/labs/detail/5b61ced2-ea24-4f34-86c4-9f9f79c2fbc3/toc)
+[Pluralsight Lab](https://app.pluralsight.com/labs/detail/33831406-4fa3-4551-a696-fd608c103253/toc)
 
 ## Lab Environment
 
