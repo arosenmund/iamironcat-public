@@ -1,1 +1,0 @@
-function AEMOnCookieConsentChangedCallback(a){}if("undefined"!=typeof WcpConsent&&null!=WcpConsent)WcpConsent.onConsentChanged(AEMOnCookieConsentChangedCallback);

@@ -1,6 +1,0 @@
-
-window[window["TiktokAnalyticsObject"]].instance("C5S71GC247CAE4T3VM1G").setAdvancedMatchingAvailableProperties({"email":true,"phone_number":true,"auto_email":false,"auto_phone_number":false});
-window[window["TiktokAnalyticsObject"]].instance("C5S71GC247CAE4T3VM1G").setPixelInfo && window[window["TiktokAnalyticsObject"]].instance("C5S71GC247CAE4T3VM1G").setPixelInfo({status: 0, name: "MSFT STORE - TikTok Pixel", advertiserID: "6976669502217928705", setupMode: 1, partner: "", is_onsite: false });
-window[window["TiktokAnalyticsObject"]].setPCMDomain && window[window["TiktokAnalyticsObject"]].setPCMDomain("microsoft.com");
-window[window["TiktokAnalyticsObject"]].setPCMConfig && window[window["TiktokAnalyticsObject"]].setPCMConfig([]);
-window[window["TiktokAnalyticsObject"]].enableFirstPartyCookie && window[window["TiktokAnalyticsObject"]].enableFirstPartyCookie(true);

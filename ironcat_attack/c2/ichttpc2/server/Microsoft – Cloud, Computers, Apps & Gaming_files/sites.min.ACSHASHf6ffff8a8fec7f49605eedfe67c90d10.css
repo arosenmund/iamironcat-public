@@ -1,5 +1,0 @@
-@media screen and (max-width:540px){.sticky.back-to-top.stuck{position:static}
-}
-@media screen and (min-width:540px){.sticky.back-to-top.pageHasChatContainer{bottom:32px !important;left:12px}
-}
-div.backToTopEditView[data-mount='back-to-top']{opacity:1 !important}

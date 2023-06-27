@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Heroes · Bootstrap v5.1</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/heroes/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="./css/heroes.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+        <div class="b-example-divider"></div>
+
+  <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold">IRONCAT ATTACK</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Quickly generate and test granular TTPs.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <!--Generate buttons with JS based on-->
+        <button id="network_attacks" type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Test Network Attacks</button>
+        <button id="endpoint_attacks" type="button" class="btn btn-primary btn-lg px-4">Test Endpoint Attacks</button>
+        <button id="ironcat_scenarios" type="button" class="btn btn-warning btn-lg px-4">Ironcat Attack Scenarios</button>
+      </div>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img src="./assets/ironcat-1.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js">
+    </script>      
+    <script>
+      const button_network_attacks = document.getElementById('network_attacks')
+      button_network_attacks.addEventListener('click', function() {
+        console.log("Button clicked!'");
+        window.location.href = './network.html'
+      });
+      const button_endpoint_attacks = document.getElementById('endpoint_attacks')
+      button_endpoint_attacks.addEventListener('click', function() {
+        console.log("Button clicked!'");
+        window.location.href = './endpoint.html'
+      });
+      const button_ironcat_scenarios = document.getElementById('ironcat_scenarios')
+      button_ironcat_scenarios.addEventListener('click', function() {
+        console.log("Button clicked!'");
+        window.location.href = './ironcat.html'
+      });
+    </script>
+  </body>
+</html>
