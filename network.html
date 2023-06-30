@@ -220,7 +220,7 @@
 
  
   // API request
-  fetch('http://localhost:8080/api/network/listfolders')
+  fetch('http://localhost:28657/api/network/listfolders')
     .then(handleApiResponse)
     .then(function(data) {
       const list = document.getElementById('techniques');
@@ -252,7 +252,7 @@
         if (target.id && target.id.startsWith('ttp-')) { 
           
           ttp = target.id.split("-");
-          const network = 'http://localhost:8080/api/network/ttp/'+ttp[1]; // Replace with your API network URL
+          const network = 'http://localhost:28657/api/network/ttp/'+ttp[1]; // Replace with your API network URL
           console.log("clicked a ttp "+network)
           // Make an API request
           fetch(network)
@@ -272,7 +272,7 @@
           });
           
           //fetch IOCs for ioc div
-          const networkioc = 'http://localhost:8080/api/network/ioc/'+ttp[1];
+          const networkioc = 'http://localhost:28657/api/network/ioc/'+ttp[1];
           fetch(networkioc)
             .then(function(response) {
               if (!response.ok) {
@@ -295,7 +295,7 @@
       function handleLaunchButtonClick(event) {
               // Perform the desired action when the button is clicked
             console.log('Another Button clicked2!');
-            const launchttp_network = 'http://localhost:8080/api/network/launch/'+ttp[1];
+            const launchttp_network = 'http://localhost:28657/api/network/launch/'+ttp[1];
               fetch(launchttp_network)
               .then(response => response.json())
               .then(data => {

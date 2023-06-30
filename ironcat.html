@@ -220,7 +220,7 @@
 
  
   // API request
-  fetch('http://localhost:8080/api/endpoint/listfolders')
+  fetch('http://localhost:28657/api/endpoint/listfolders')
     .then(handleApiResponse)
     .then(function(data) {
       const list = document.getElementById('techniques');
@@ -252,7 +252,7 @@
         if (target.id && target.id.startsWith('ttp-')) { 
           
           ttp = target.id.split("-");
-          const endpoint = 'http://localhost:8080/api/endpoint/ttp/'+ttp[1]; // Replace with your API endpoint URL
+          const endpoint = 'http://localhost:28657/api/endpoint/ttp/'+ttp[1]; // Replace with your API endpoint URL
           console.log("clicked a ttp "+endpoint)
           // Make an API request
           fetch(endpoint)
@@ -272,7 +272,7 @@
           });
           
           //fetch IOCs for ioc div
-          const endpointioc = 'http://localhost:8080/api/endpoint/ioc/'+ttp[1];
+          const endpointioc = 'http://localhost:28657/api/endpoint/ioc/'+ttp[1];
           fetch(endpointioc)
             .then(function(response) {
               if (!response.ok) {
@@ -295,7 +295,7 @@
       function handleLaunchButtonClick(event) {
               // Perform the desired action when the button is clicked
             console.log('Another Button clicked2!');
-            const launchttp_endpoint = 'http://localhost:8080/api/endpoint/launch/'+ttp[1];
+            const launchttp_endpoint = 'http://localhost:28657/api/endpoint/launch/'+ttp[1];
               fetch(launchttp_endpoint)
               .then(response => response.json())
               .then(data => {
