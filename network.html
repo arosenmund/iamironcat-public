@@ -104,7 +104,7 @@
             C2
           </button>
           <div class="collapse show" id="home-collapse">
-            <ul id="C2" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <ul id="c2" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             </ul>
           </div>
         </li>
@@ -219,10 +219,10 @@
 
  
   // API request C2
-  fetch('http://localhost:28657/api/network/listfolders/C2')
+  fetch('http://localhost:28657/api/network/listfolders/c2')
     .then(handleApiResponse)
     .then(function(data) {
-      const list = document.getElementById('C2');
+      const list = document.getElementById('c2');
       // Loop through the JSON data and create <li> elements
       list.innerHTML = '';
      // Loop through the array and create <li> elements
