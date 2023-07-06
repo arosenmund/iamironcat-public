@@ -96,22 +96,22 @@
     <div id=side-bar class="flex-shrink-0 p-3 bg-dark" style="width: 280px;">
       <a href="/" class="d-flex align-items-center pb-3 mb-3 link-light text-decoration-none border-bottom">
         <svg class="bi me-2" width="30" height="24"><use xlink:href="#home"/></svg>
-        <span class="fs-5 fw-semibold">network TTPs</span>
+        <span class="fs-5 fw-semibold">Network TTPs</span>
       </a>
       <ul class="list-unstyled ps-0">
         <li class="mb-1">
           <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-            Techniques
+            C2
           </button>
           <div class="collapse show" id="home-collapse">
-            <ul id="techniques" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <ul id="C2" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
               <li><a href="#" class="link-light rounded">Overview</a></li>
             </ul>
           </div>
         </li>
         <li class="mb-1">
           <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-            Priveledge Escalation
+            Brute Force
           </button>
           <div class="collapse" id="dashboard-collapse">
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -120,7 +120,7 @@
         </li>
         <li class="mb-1">
           <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-            C2
+            DOS
           </button>
           <div class="collapse" id="orders-collapse">
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -130,7 +130,7 @@
         <li class="border-top my-3"></li>
         <li class="mb-1">
           <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-            Execution
+            Exploit
           </button>
           <div class="collapse" id="account-collapse">
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -220,10 +220,10 @@
 
  
   // API request
-  fetch('http://localhost:28657/api/network/listfolders')
+  fetch('http://localhost:28657/api/network/listfolders/C2')
     .then(handleApiResponse)
     .then(function(data) {
-      const list = document.getElementById('techniques');
+      const list = document.getElementById('C2');
       // Loop through the JSON data and create <li> elements
       list.innerHTML = '';
      // Loop through the array and create <li> elements
@@ -246,13 +246,15 @@
     
     let listenerAdded = false;
     let ttp;
+    let category;
     function handleParentClick(event) {
         
         const target = event.target;
         if (target.id && target.id.startsWith('ttp-')) { 
           
           ttp = target.id.split("-");
-          const network = 'http://localhost:28657/api/network/ttp/'+ttp[1]; // Replace with your API network URL
+          category = target.parentNode.parentNode.id;
+          const network = 'http://localhost:28657/api/network/ttp/'+category+'/'+ttp[1]; // Replace with your API network URL
           console.log("clicked a ttp "+network)
           // Make an API request
           fetch(network)
@@ -272,7 +274,7 @@
           });
           
           //fetch IOCs for ioc div
-          const networkioc = 'http://localhost:28657/api/network/ioc/'+ttp[1];
+          const networkioc = 'http://localhost:28657/api/network/ioc/'+category+"/"+ttp[1];
           fetch(networkioc)
             .then(function(response) {
               if (!response.ok) {
@@ -295,7 +297,7 @@
       function handleLaunchButtonClick(event) {
               // Perform the desired action when the button is clicked
             console.log('Another Button clicked2!');
-            const launchttp_network = 'http://localhost:28657/api/network/launch/'+ttp[1];
+            const launchttp_network = 'http://localhost:28657/api/network/launch/'+category+"/"+ttp[1];
               fetch(launchttp_network)
               .then(response => response.json())
               .then(data => {
