@@ -1,0 +1,1 @@
+Encrypted communications over HTTP
