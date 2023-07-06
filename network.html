@@ -114,7 +114,7 @@
             Brute Force
           </button>
           <div class="collapse" id="dashboard-collapse">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <ul id="brute_force" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             </ul>
           </div>
         </li>
@@ -219,11 +219,31 @@
     }
 
  
-  // API request
+  // API request C2
   fetch('http://localhost:28657/api/network/listfolders/C2')
     .then(handleApiResponse)
     .then(function(data) {
       const list = document.getElementById('C2');
+      // Loop through the JSON data and create <li> elements
+      list.innerHTML = '';
+     // Loop through the array and create <li> elements
+     
+      data.forEach(function(item, index) {
+          const className1 = 'link-light';
+          const className2 = 'rounded';
+          const li = createStyledListItem(item, className1, className2);
+          list.appendChild(li);
+        });
+      })
+    .catch(function(error) {
+      console.error('API request failed:', error);
+    });
+
+    // API request
+  fetch('http://localhost:28657/api/network/listfolders/brute_force')
+    .then(handleApiResponse)
+    .then(function(data) {
+      const list = document.getElementById('brute_force');
       // Loop through the JSON data and create <li> elements
       list.innerHTML = '';
      // Loop through the array and create <li> elements
